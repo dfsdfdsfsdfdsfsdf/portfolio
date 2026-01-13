@@ -1,0 +1,6 @@
+flask
+psycopg2
+sys
+os
+dotenv
+argon2
