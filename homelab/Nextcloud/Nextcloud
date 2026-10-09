@@ -1,0 +1,112 @@
+# Self-Hosted Nextcloud for Private File Sync, Photos, and Collaboration
+
+## Overview
+
+This project documents the deployment and use of a self-hosted Nextcloud instance as a private alternative to commercial cloud storage platforms such as Google Drive and iCloud.
+
+The system is used daily by myself and a small group of trusted users as a secure solution for file storage, photo backups, and collaborative document editing — without exposing the service to the public internet.
+
+---
+
+## Objectives
+
+- Replace third-party cloud storage services
+- Maintain full control over data and access
+- Enable secure file sync and photo backups
+- Provide an online office suite for collaborative use
+- Avoid public exposure through port forwarding
+
+---
+
+## Core Features in Use
+
+- File storage and synchronisation
+- Automatic photo backups from mobile devices
+- Shared folders between users
+- Online document editing (office suite)
+- Cross-device access (desktop and mobile clients)
+
+---
+
+## Architecture
+
+The Nextcloud instance is deployed using Docker and is accessible **only via a private mesh VPN (Tailscale)**.
+Clients → Tailscale → Dockerised Nextcloud → Local Storage
+
+There is:
+- No public IP exposure
+- No port forwarding
+- No reliance on third-party cloud providers for access
+
+---
+
+## Implementation Details
+
+- Nextcloud is deployed as a Docker container on a home server
+- User access is restricted to devices connected to the Tailscale network
+- Each user has an individual account with scoped permissions
+- Shared folders are used for collaborative files
+- Mobile clients are configured for automatic photo uploads
+
+---
+
+## Use Case
+
+The system is actively used by:
+- Myself
+- Jess
+- David
+
+It functions as:
+- A replacement for Google Drive
+- A replacement for iCloud photo backups
+- A private shared workspace for documents and files
+
+This setup ensures data ownership remains internal while still providing the convenience of modern cloud services.
+
+---
+
+## Security Considerations
+
+- Service is not exposed to the public internet
+- Access is limited to authenticated tailnet devices
+- All data remains on locally managed storage
+- User permissions are controlled within Nextcloud
+
+---
+
+## Benefits of This Approach
+
+- Full ownership and control of personal data
+- Reduced dependency on third-party providers
+- Predictable access without subscription pressure
+- Secure remote access from anywhere via tailnet
+- Easily extensible with additional Nextcloud apps
+
+---
+
+## Lessons Learned
+
+- Deploying services behind a private mesh VPN significantly reduces attack surface
+- Docker simplifies maintenance and upgrades
+- Self-hosted solutions can fully replace commercial offerings when designed carefully
+- Access control and usability must be balanced to ensure adoption by non-technical users
+
+---
+
+## Future Improvements
+
+- Storage expansion and redundancy
+- Additional monitoring and alerting
+- Further automation of backups
+- Integration with other self-hosted services
+
+---
+
+## Key Skills Demonstrated
+
+- Docker deployment and management
+- Secure network design using private VPNs
+- User access and permission management
+- Self-hosted cloud services administration
+- Practical data ownership and privacy engineering

@@ -1,0 +1,30 @@
+<header class="top-bar">
+  <div id="logo" class="logo">
+    <h1 id="my-online-bible">MyOnlineBible</h1>
+  </div>
+  <div id='menu-div' class='menu-div'>
+  <button id="menu-toggle" class="menu-button">
+    <img
+      id="menu-icon"
+      src="{{ url_for('static', filename='img/closed-book.png') }}"
+      alt="Open menu"
+    >
+  </button>
+    <button id='highlight-button'><img id='yellow-highlighter' class='yellow-highlighter' name='yellow-highlighter' src='{{url_for("static", filename="img/highlighter-yellow.png")}}'></img></button>
+  </div>
+  <div id='login-register' class='login-register' name='login-register'>
+      <a href="{{url_for('register')}}">
+          <button >Register</button></a>
+      <button href="{{url_for('login')}}">Log In</button>
+  </div>
+</header>
+<br />
+<nav id="side-menu" class="side-menu">
+  <div class="menu-header">
+    <h2>Books & Chapters</h2>
+  </div>
+
+  <div id="books-list">
+  </div>
+</nav>
+

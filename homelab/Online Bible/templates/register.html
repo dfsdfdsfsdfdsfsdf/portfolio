@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register</title>
+    <link rel='stylesheet' href='{{url_for("static", filename="css/style.css")}}'>
+    <script defer src="{{url_for('static', filename='js/banner.js')}}"</script>
+  </head>
+  <body>
+    <script defer src="index.js"></script>
+    {% include 'banner.html' %}
+    <div id='register' class='register' name='register'>
+    <h1>Register your account</h1>
+    <form method='POST' class='register-form' action='/submit'>
+    <input id='username' name='username' type='text' placeholder='Please enter your username' >
+    <br />
+    <input type='email' id='email' name='email' placeholder='Please enter your email'>
+    <br />
+    <input id='password' type='password' name='password' placeholder='Please enter your Password'>
+    <br />
+    <input type='password' id='confirmed' name='confirmed' placeholder='Please confirm your password'>
+    <br />
+    <input type='submit' value='submit'>
+    </form>
+
+    </div>
+  </body>
+</html>
+
